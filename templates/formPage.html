@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <label> Number 1: </label>
+    <input type="number" name="x" required>
+    <br><br>
+    <label> Number 2: </label>
+    <input type="number" name="y" required>
+    <br><br>
+    <button type="submit"> Submit </button>
+</form>
+
+<h1>The Max of the two number is: {{ max }}</h1>
+
+</body>
+</html>

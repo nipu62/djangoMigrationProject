@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+    <head>
+        {% comment %}
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+        {% endcomment %}  
+    </head>
+    <body>
+        <h1> Hello {{ name }}!</h1>
+        <a href="/myForm"> Redirect to My Form</a>
+        <br><br><br>
+        <a href="/product"> Redirect to Product List</a>
+    </body>
+</html>

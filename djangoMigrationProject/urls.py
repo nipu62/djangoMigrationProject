@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from djangoMigrationProject.views import ProductView
+from djangoMigrationProject.views import ProductView, HelloWorld, MyForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", ProductView.as_view())
+    path("", HelloWorld.as_view()),
+    path("myForm", MyForm.as_view()),
+    path("product", ProductView.as_view())
 ]
