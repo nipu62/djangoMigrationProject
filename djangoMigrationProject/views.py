@@ -27,3 +27,14 @@ class ProductView(ListView):
     model = Product
     template_name = 'productList.html'
     context_object_name = 'products'
+
+class Counter(View):
+  def get(self, request):
+    count = request.session.get("count",0)
+    return render(request, 'counterPage.html',{"count":count})
+  def post(self, request):
+    count = request.session.get("count",0)
+    count = count + 1
+    request.session["count"]=count
+    request.session.set_expiry(300)
+    return render(request, 'counterPage.html',{"count":count})
