@@ -22,7 +22,7 @@ from djangoMigrationProject.views import ProductView, HelloWorld, MyForm, Counte
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HelloWorld.as_view()),
-    # path('', Counter.as_view()),
+    path('counter', Counter.as_view()),
     path("myForm", MyForm.as_view()),
     path("product", ProductView.as_view())
 ]
